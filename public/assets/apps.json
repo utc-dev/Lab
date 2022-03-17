@@ -1,0 +1,278 @@
+{
+  "code": "LABORATORY_EQUIPMENT",
+  "name": "Quản lý kế hoạch thực hiện nhiệm vụ KHCN",
+  "shortName": "Kế hoạch KHCN",
+  "endpoints": {
+    "api": "https://localhost:44390",
+    "user": "https://usmart.utc.edu.vn/gwprod/organizationmanagement/user",
+    "permission": "https://usmart-gateway-v5.utc.edu.vn/authorization/v5/permission",
+    "avatar": "https://usmart.utc.edu.vn/gwprod/file/file",
+    "employeeProfile": "https://usmart.utc.edu.vn:21074/gwprod/employee-profile",
+    "notification": "https://usmart-gateway-v5.utc.edu.vn/notification"
+  },
+  "formatter": {
+    "number": {
+      "decimal": ",",
+      "thousands": ".",
+      "prefix": "",
+      "suffix": "",
+      "precision": 2,
+      "disableNegative": false,
+      "allowBlank": true,
+      "max": 1000000000000,
+      "debug": true,
+      "masked": false,
+      "disabled": false,
+      "min": -1000000000000,
+      "minimumNumberOfCharacters": 0,
+      "shouldRound": false,
+      "modelModifiers": {
+        "number": false
+      }
+    },
+    "money": {
+      "decimal": ",",
+      "thousands": ".",
+      "prefix": "",
+      "suffix": " đồng",
+      "precision": 0,
+      "disableNegative": true,
+      "allowBlank": false,
+      "max": 1000000000000,
+      "debug": false,
+      "masked": false,
+      "disabled": false,
+      "min": 0,
+      "minimumNumberOfCharacters": 0,
+      "shouldRound": false,
+      "modelModifiers": {
+        "number": false
+      }
+    },
+    "date": "DD/MM/YYYY",
+    "dateTime": "DD/MM/YYYY"
+  },
+  "apps": [
+    {
+      "code": "QLHC",
+      "icon": "fas fa-poll",
+      "title": "Hành chính",
+      "longTitle": "Quản lý hành chính",
+      "url": "qlhc",
+      "target": "_blank",
+      "defaultRedirect": "main/bookingmeetingrooms/meeting-schedules",
+      "visible": true,
+      "background": "#6e5ada",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "QLCV",
+      "icon": "fab fa-windows",
+      "title": "Công việc",
+      "longTitle": "Quản lý công việc",
+      "url": "qlhc",
+      "defaultRedirect": "qlcv/view/task/task/cong-viec-cho-xu-ly",
+      "target": "_blank",
+      "visible": false,
+      "background": "#b8a3dc",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "VANBAN",
+      "icon": "far fa-file",
+      "title": "Văn bản",
+      "longTitle": "Quản lý văn bản",
+      "url": "vanban",
+      "defaultRedirect": "dashboard",
+      "target": "_blank",
+      "visible": true,
+      "background": "#b8a3dc",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "CONGVIEC",
+      "icon": "fab fa-windows",
+      "title": "Công việc",
+      "longTitle": "Quản lý công việc",
+      "url": "congviec",
+      "defaultRedirect": "/dashboard",
+      "target": "_blank",
+      "visible": true,
+      "background": "#b8a3dc",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "TAILIEU",
+      "icon": "fas fa-share-alt",
+      "title": "Tài liệu",
+      "longTitle": "Phân hệ chia sẻ tài liệu",
+      "url": "tailieu",
+      "defaultRedirect": "dashboard",
+      "target": "_blank",
+      "visible": true,
+      "background": "#b8a3dc",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "THONGBAO",
+      "icon": "fas fa-bell",
+      "title": "Thông báo",
+      "longTitle": "Phân hệ thông báo",
+      "url": "thongbao",
+      "defaultRedirect": "dashboard",
+      "target": "_blank",
+      "visible": true,
+      "background": "#b8a3dc",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "CONGCANBO",
+      "visible": false,
+      "icon": "fas fa-user-friends",
+      "target": "_blank",
+      "url": "congcanbo/canbo-hoso",
+      "defaultRedirect": "",
+      "title": "Cổng cán bộ",
+      "longTitle": "Cổng thông tin bán bộ",
+      "background": "#aaa096",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "CANBO",
+      "visible": true,
+      "icon": "fas fa-user",
+      "target": "_blank",
+      "url": "canbo",
+      "1--url": "https://usmart-v5.utc.edu.vn/canbo",
+      "defaultRedirect": "dashboard",
+      "title": "Cán bộ",
+      "longTitle": "Quản lý tổ chức cán bộ",
+      "background": "#8BC34A",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "NCKH",
+      "visible": true,
+      "icon": "fas fa-drafting-compass",
+      "target": "_blank",
+      "url": "qlhc",
+      "defaultRedirect": "nckh",
+      "title": "KH-CN",
+      "longTitle": "Quản lý Khoa học - Công nghệ",
+      "background": "#448fff",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "QLTN",
+      "icon": "fas fa-building",
+      "title": "Tài sản, CSVC",
+      "longTitle": "Quản lý tài sản, csvc",
+      "url": "qltn",
+      "defaultRedirect": "main/tbl-ts-taisancodinh",
+      "showDefaultSetting": true,
+      "visible": true,
+      "configDefaultSetting": {
+        "column": [
+          {
+            "field": "heDaoTao",
+            "required": true
+          },
+          {
+            "field": "namHoc",
+            "required": true
+          },
+          {
+            "field": "hocKy",
+            "required": true
+          }
+        ]
+      },
+      "target": "_blank",
+      "background": "#009688",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "KHAOSAT",
+      "icon": "far fa-chart-bar",
+      "1--icon": "fas fa-poll",
+      "target": "_blank",
+      "url": "khaosat",
+      "defaultRedirect": "khao-sat",
+      "1--forceRedirectUrl": "khaosat/khao-sat",
+      "showDefaultSetting": false,
+      "visible": true,
+      "title": "Khảo sát",
+      "longTitle": "Quản lý khảo sát",
+      "background": "#FFC107",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "USER",
+      "visible": false,
+      "target": "_blank",
+      "url": "user",
+      "defaultRedirect": "main/managemant-notification",
+      "title": "Trang cá nhân",
+      "longTitle": "Phân hệ trang cá nhân"
+    },
+    {
+      "code": "USER",
+      "visible": false,
+      "target": "_blank",
+      "url": "userv5",
+      "defaultRedirect": "main",
+      "title": "Trang cá nhân",
+      "longTitle": "Phân hệ trang cá nhân"
+    },
+    {
+      "code": "ADMIN",
+      "icon": "fas fa-tools",
+      "title": "Quản trị",
+      "longTitle": "Quản trị hệ thống",
+      "url": "admin",
+      "defaultRedirect": "main/master-data/single",
+      "target": "_blank",
+      "visible": true,
+      "background": "#87b1c5",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    },
+    {
+      "code": "ADMIN",
+      "icon": "fas fa-tools",
+      "title": "Quản trị",
+      "longTitle": "Quản trị hệ thống",
+      "url": "adminv4",
+      "defaultRedirect": "main/master-data/group",
+      "target": "_blank",
+      "visible": false,
+      "background": "#87b1c5",
+      "colorTitle": "#fff",
+      "colorIcon": "#fff",
+      "column": 1
+    }
+  ]
+}

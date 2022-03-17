@@ -1,0 +1,9 @@
+{
+  "authority": "https://sso.utc.edu.vn",
+  "client_id": "v4-main-app",
+  "issuer": "https://sso.utc.edu.vn",
+  "scope": "openid profile email vanphongdientu.api",
+  "response_type": "token id_token",
+  "prompt": "login",
+  "monitorSession": false
+}
