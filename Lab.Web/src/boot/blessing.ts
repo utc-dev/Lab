@@ -14,7 +14,7 @@ export default boot(async ({ app, router }) => {
     const navigation: NavigationLink | undefined = (meta.navigation ||
       {}) as NavigationLink;
     if (navigation && navigation.text) {
-      document.title = `${navigation.text} | Quản lý kế hoạch thực hiện nhiệm vụ KHCN`;
+      document.title = `${navigation.text} | UTC-LAB`;
     }
   });
 });

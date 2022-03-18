@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Bics.Office.Word" Version="6.2.8" />
+		<PackageReference Include="Bics.Services" Version="6.2.8" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Lab.Data\Lab.Data.csproj" />
+		<ProjectReference Include="..\Lab.Models\Lab.Models.csproj" />
+	</ItemGroup>
+</Project>
