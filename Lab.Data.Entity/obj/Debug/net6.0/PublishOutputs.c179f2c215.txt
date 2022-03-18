@@ -1,9 +1,0 @@
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\LAb.Data.Entity.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\LAb.Data.Entity.deps.json
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\LAb.Data.Entity.pdb
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Bics.Data.Entity.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Bics.Infrastructure.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Microsoft.EntityFrameworkCore.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Microsoft.EntityFrameworkCore.Relational.dll
-E:\Bics\Tools\Bics.Generator\bin\Release\net6.0-windows\publish\bin\LAb\Microsoft.Extensions.DependencyModel.dll
