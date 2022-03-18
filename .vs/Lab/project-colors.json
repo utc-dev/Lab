@@ -20,7 +20,37 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "adf0aab5-5fd0-407b-842d-7fce9f43c3af": {
+      "ProjectGuid": "adf0aab5-5fd0-407b-842d-7fce9f43c3af",
+      "DisplayName": "Lab.Data.Entity",
+      "ColorIndex": 3
+    },
+    "d6987503-cd4c-4b08-ade4-df8fec00f491": {
+      "ProjectGuid": "d6987503-cd4c-4b08-ade4-df8fec00f491",
+      "DisplayName": "Lab.Services",
+      "ColorIndex": 4
+    },
+    "0b325f7b-f3c8-444a-8dda-a2df4052c3dd": {
+      "ProjectGuid": "0b325f7b-f3c8-444a-8dda-a2df4052c3dd",
+      "DisplayName": "Lab.AutoMapper",
+      "ColorIndex": 5
+    },
+    "eccb9692-ee1a-49bb-9bb7-e0b18f5107cc": {
+      "ProjectGuid": "eccb9692-ee1a-49bb-9bb7-e0b18f5107cc",
+      "DisplayName": "Lab.Api",
+      "ColorIndex": 6
+    },
+    "9ab3f6a2-d4a3-4c77-a28b-a83d7b059e42": {
+      "ProjectGuid": "9ab3f6a2-d4a3-4c77-a28b-a83d7b059e42",
+      "DisplayName": "Lab.Data",
+      "ColorIndex": 7
+    },
+    "b39d1f45-862d-4b95-bf1b-4a7df5a1ae58": {
+      "ProjectGuid": "b39d1f45-862d-4b95-bf1b-4a7df5a1ae58",
+      "DisplayName": "Lab.Models",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 9
 }
