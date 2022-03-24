@@ -1,5 +1,4 @@
 import { TableColumn } from '@blessing-vn/webapp';
-import { date } from 'quasar';
 
 export const ChiTietSanPhamColumns: TableColumn[] = [
   {
@@ -32,9 +31,7 @@ export const ChiTietSanPhamColumns: TableColumn[] = [
     field: 'publishYear',
     align: 'center',
     sortable: true,
-    format: (val: string) => {
-        return date.formatDate(val, 'HH:mm DD/MM/YYYY');
-    },
+    
   },
   {
     name: 'Author',

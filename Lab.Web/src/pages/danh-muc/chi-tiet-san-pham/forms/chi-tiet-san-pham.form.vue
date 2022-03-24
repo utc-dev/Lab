@@ -1,17 +1,15 @@
 <template>
   <b-form @submit="onSubmit">
-    <div class="row q-col-gutter-x-md">
-      <div class="col">
-        <b-select-criterion v-model="item.loai" label="Thể loại sách" />
+    <div class="col">
+        <q-input v-model="item.loai" label="Thể loại sách" />
       </div>
-    </div>
     <div class="row q-col-gutter-x-md">
       <div class="col">
         <q-input v-model="item.ten" label="Tên sách" />
       </div>
       <div class="col">
         <q-select
-          v-model="item.namApDung"
+          v-model="item.publishYear"
           label="Năm sản xuất"
           :options="years"
         ></q-select>
@@ -22,9 +20,7 @@
       <div class="col">
         <b-input-number v-model="item.soLuong" label="Số lượng" />
       </div>
-      <div class="col">
-        <b-input-number v-model="item.id" label="Id" />
-      </div>
+      
     </div>
     <template #actions>
       <q-btn label="Lưu lại" type="submit" color="primary" icon="save">
