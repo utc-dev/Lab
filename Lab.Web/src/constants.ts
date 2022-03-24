@@ -3,7 +3,7 @@ import { CriterionOption } from './models';
 const DEFAULT_YEAR: number = new Date().getFullYear();
 const lengthOfYear = DEFAULT_YEAR - 2016 + 5;
 const YEARS: number[] = Array<number>(lengthOfYear)
-  .fill(2016)
+  .fill(1990)
   .map((y, i) => y + i)
   .reverse();
 const SCHOLASTICS: { value: number; label: string }[] = YEARS.map((x) => ({ value: x, label: `${x}-${x + 1}` }));
@@ -20,51 +20,23 @@ const SCHOLASTICS: { value: number; label: string }[] = YEARS.map((x) => ({ valu
 
 const CRITERIONS = [
   {
-    group: 'Nhiệm vụ KHCN mà CBGV chủ trì được cấp mới trong năm tới',
+    group: 'Thể loại sách',
     items: [
-      { value: 1, label: 'Cấp quốc gia/quốc tế' },
-      { value: 2, label: 'Cấp Bộ và tương đương' },
-      { value: 3, label: 'Cấp Trường trọng điểm' },
-      { value: 4, label: 'Cấp Trường' },
+      { value: 1, label: 'Văn học' },
+      { value: 2, label: 'Kinh tế' },
+      { value: 3, label: 'Thiếu nhi' },
+      { value: 4, label: 'Kỹ năng sống' },
+      { value: 5, label: 'Truyện tranh'},
+      { value: 6, label: 'Kinh tế'},
+      { value: 7, label: ' Từ điển'},
+      { value: 8, label: 'Ngoại ngữ'},
+      { value: 9, label: 'Tham khảo'},
+      { value: 10, label: 'Lịch sử'},
+      { value: 11, label: 'Toán học'},
+      { value: 12, label: 'Kiến thức tổng hợp'},
     ],
   },
-  {
-    group: 'Đề tài NCKH của SV trong năm học',
-    items: [
-      { value: 5, label: 'Nghiệm thu cấp Trường' },
-      { value: 6, label: 'Đạt giải ngoài Trường' },
-    ],
-  },
-  {
-    group: 'Bài báo tạp chí khoa học do CBGV công bố trong năm học',
-    items: [
-      { value: 7, label: 'SCIE/SSCI/A&HCI/ESCI' },
-      { value: 8, label: 'Scopus' },
-      { value: 9, label: 'Quốc tế khác' },
-      { value: 10, label: 'Trong nước' },
-    ],
-  },
-  {
-    group: 'Báo cáo hội nghị hội thảo khoa học của CBGV trong năm học',
-    items: [
-      { value: 11, label: 'Quốc tế' },
-      { value: 12, label: 'Trong nước' },
-    ],
-  },
-  {
-    group: 'Đăng ký SHTT, biên soạn TCCS trong năm học',
-    items: [
-      { value: 13, label: 'Sáng chế' },
-      { value: 14, label: 'Giải pháp hữu ích, TCCS' },
-    ],
-  },
-  {
-    group: 'HNHT khoa học tổ chức trong năm học',
-    items: [
-      { value: 15, label: 'Quốc tế' },
-      { value: 16, label: 'Trong nước' },
-    ],
-  },
+  
 ];
 
 const CRITERION: { [key: number | string]: CriterionOption } = {};
