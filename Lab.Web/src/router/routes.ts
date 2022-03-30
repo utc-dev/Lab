@@ -65,6 +65,20 @@ const routes: RouteRecord[] = [
           },
         },
       },
+      {
+        path: 'danh-muc/chi-tiet-san-pham',
+        component: () =>
+          import('pages/danh-muc/chi-tiet-san-pham/chi-tiet-san-pham.page.vue'),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'trending_up',
+            text: 'Chi tiết sản phẩm',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
     ],
   },
   // Always leave this as last one,
