@@ -4,6 +4,7 @@ using Lab.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lab.Data.Migrations
 {
     [DbContext(typeof(LabDataContext))]
-    partial class LabDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220330041224_editTableBookAuthor")]
+    partial class editTableBookAuthor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,7 +160,7 @@ namespace Lab.Data.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<DateTime>("Birthday")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");

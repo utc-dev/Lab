@@ -1,6 +1,7 @@
 ﻿using Bics.Data.Entity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Lab.Data.Entity
         /// <summary>
         /// Ngày sinh
         /// </summary>
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
         /// <summary>
         /// Loại tác giả (Tác giả chính, tác giả tham gia)

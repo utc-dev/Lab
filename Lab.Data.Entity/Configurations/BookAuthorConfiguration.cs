@@ -9,10 +9,11 @@ namespace Lab.Data.Entity
 		{
 			builder.HasKey(x => x.Id);
 			builder.Property(x => x.Id).ValueGeneratedOnAdd();
+			builder.Property(x => x.Birthday).HasColumnType("date");
 			builder.Property(x => x.Ten).HasMaxLength(150).IsRequired(false).IsUnicode();
 			builder.Property(x => x.LoaiTacGia).HasMaxLength(50).IsRequired(false).IsUnicode();
 			builder.Property(x => x.Address).HasMaxLength(500).IsRequired(false).IsUnicode();
-			builder.Property(x => x.Mobile).HasMaxLength(500).IsRequired(false).IsUnicode();
+			builder.Property(x => x.Mobile).HasMaxLength(10).IsRequired(false).IsUnicode();
 		
 		
 		}
