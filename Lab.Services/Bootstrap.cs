@@ -16,6 +16,7 @@ namespace Lab.Services
 		public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddScoped<IBookService, BookService>();
+			services.AddScoped<IBookAuthorService, BookAuthorService>();
 		}
 	}
 }
