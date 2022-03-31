@@ -168,12 +168,12 @@
 </template>
 <script lang="ts" setup>
 import { usePage } from '@blessing-vn/webapp';
-import { ChiTietSanPhamColumns } from './chi-tiet-san-pham.columns';
-import { ChiTietSanPhamForm, SanPhamForm } from './forms';
+import { ChiTietTacGiaColumns } from './tac-gia.columns';
+import { ChiTietTacGiaForm, TacGiaForm } from './forms';
 import { DEFAULT_YEAR, YEARS } from 'src/constants';
 
-const title = 'Chi tiết sản phẩm';
-const apiName = 'book';
+const title = 'Chi tiết tác giả';
+const apiName = 'book-author';
 
 const {
   items,
@@ -201,11 +201,11 @@ const {
 } = usePage({
   name: apiName,
   title: title,
-  columns: ChiTietSanPhamColumns,
+  columns: ChiTietTacGiaColumns,
   components: {
-    addForm: ChiTietSanPhamForm,
-    editForm: ChiTietSanPhamForm,
-    viewForm: SanPhamForm,
+    addForm: ChiTietTacGiaForm,
+    editForm: ChiTietTacGiaForm,
+    viewForm: TacGiaForm,
   },
   events: {
     onAdd: (model) => {

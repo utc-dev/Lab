@@ -79,6 +79,22 @@ const routes: RouteRecord[] = [
           },
         },
       },
+      {
+        path: 'danh-muc/tac-gia',
+        component: () =>
+          import(
+            'pages/danh-muc/tac-gia/tac-gia.page.vue'
+          ),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'webhook',
+            text: 'Chi tiết tác giả',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
     ],
   },
   // Always leave this as last one,
