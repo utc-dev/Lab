@@ -17,6 +17,7 @@ namespace Lab.Services
 		{
 			services.AddScoped<IBookService, BookService>();
 			services.AddScoped<IBookAuthorService, BookAuthorService>();
+			services.AddScoped<IBookCategoryService, BookCategoryService>();
 		}
 	}
 }

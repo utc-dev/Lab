@@ -2,7 +2,7 @@
   <b-form @submit="onSubmit">
     <div class="row q-col-gutter-x-md">
       <div class="col">
-        <q-input v-model="item.code" label="Mã năng lực" />
+        <q-input v-model="item.code" label="Mã năng lực" :options="criterions" />
       </div>
       <div class="col">
         <b-input-number v-model="item.heSo" label="Hệ số năng lực" />
@@ -31,6 +31,7 @@
 import { YEARS } from 'src/constants';
 import { IModel } from '@blessing-vn/core';
 import { reactive, ref } from 'vue';
+import { CRITERIONS } from 'src/constants';
 
 interface FormProps {
   model: IModel;
@@ -46,7 +47,7 @@ const emit = defineEmits<FormEmits>();
 const item = ref(props.model);
 
 const years = reactive(YEARS);
-
+const criterions = reactive(CRITERIONS)
 const onSubmit = () => {
   emit('saveChanges', item.value);
 };

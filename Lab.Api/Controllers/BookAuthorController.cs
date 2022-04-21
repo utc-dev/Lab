@@ -41,6 +41,12 @@ namespace Lab.Api.Controllers
 			return _service.Add(model);
 		}
 
+		[HttpPost("add-multiple")]
+		public IMethodResult Add(List<BookAuthorFormModel> models)
+		{
+			return _service.Add(models: models);
+		}
+
 		[HttpPut("{id}")]
 		public IMethodResult Update(int id, BookAuthorFormModel model)
 		{

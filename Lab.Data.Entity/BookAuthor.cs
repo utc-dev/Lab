@@ -26,6 +26,7 @@ namespace Lab.Data.Entity
         /// Ngày sinh
         /// </summary>
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthday { get; set; }
         /// <summary>
         /// Loại tác giả (Tác giả chính, tác giả tham gia)

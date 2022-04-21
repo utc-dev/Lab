@@ -1,38 +1,11 @@
 <template>
   <b-form @submit="onSubmit">
     <div class="col">
-      <q-select 
-      :options="selectCategoryDataSource"
-      v-model="item.loai"
-      emit-value
-      option-value="ten"
-      option-label="ten"
-      label="Thể loại sách" 
-      ></q-select>
+      <q-input v-model="item.ma" label="Mã thể loại" />
     </div>
     <div class="row q-col-gutter-x-md">
       <div class="col">
-        <q-input v-model="item.ten" label="Tên sách" />
-      </div>
-      <div class="col">
-        <q-select
-          v-model="item.publishYear"
-          label="Năm sản xuất"
-          :options="years"
-        ></q-select>
-      </div>
-      <div class="col">
-        <q-select
-          :options="selectAuthorDataSource"
-          v-model="item.author"
-          emit-value
-          option-value="ten"
-          option-label="ten"
-          label="Tên tác giả"
-        ></q-select>
-      </div>
-      <div class="col">
-        <b-input-number v-model="item.soLuong" label="Số lượng" />
+        <q-input v-model="item.ten" label="Tên thể loại" />
       </div>
     </div>
     <template #actions>
@@ -62,12 +35,11 @@ const props = defineProps<FormProps>();
 const emit = defineEmits<FormEmits>();
 
 const _authorService = useService('book-author');
-const _categoryService = useService('book-category');
+
 const item = ref(props.model);
 
 const years = reactive(YEARS);
 const selectAuthorDataSource = ref([]);
-const selectCategoryDataSource = ref([]);
 const onSubmit = () => {
   emit('saveChanges', item.value);
 };
@@ -87,8 +59,6 @@ const GetBookAuthors = async () => {
     size: 10000,
   };
   const resp = await _authorService.get('', { params: filter });
-  const resp1 = await _categoryService.get('', { params : filter });
   selectAuthorDataSource.value = resp.items;
-  selectCategoryDataSource.value = resp1.items;
 };
 </script>

@@ -44,7 +44,7 @@ export const ChiTietTacGiaColumns: TableColumn[] = [
   {
     name: 'LoaiTacGia',
     label: 'Loại tác giả',
-    field: 'loaitacgia',
+    field: 'loaiTacGia',
     align: 'center',
     sortable: true,
     required: true,
@@ -60,7 +60,7 @@ export const ChiTietTacGiaColumns: TableColumn[] = [
   {
     name: 'Mobie',
     label: 'Số điện thoại',
-    field: 'mobie',
+    field: 'mobile',
     align: 'center',
     sortable: true,
     required: true,

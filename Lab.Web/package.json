@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "@blessing-vn/webapp": "2022.3.600",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.3",
     "@quasar/extras": "^1.12.5",
-    "quasar": "^2.5.5",
     "core-js": "^3.6.5",
+    "quasar": "^2.5.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",
     "vuex": "^4.0.1"

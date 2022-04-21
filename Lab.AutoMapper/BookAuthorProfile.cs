@@ -1,4 +1,5 @@
 using Bics.AutoMapper;
+using Lab.AutoMapper.Action;
 using Lab.Data.Entity;
 using Lab.Models;
 
@@ -10,7 +11,9 @@ namespace Lab.AutoMapper
 		{
 			CreateMap<BookAuthor, BookAuthorViewModel>();
 			CreateMap<BookAuthor, BookAuthorDetailModel>();
-			CreateMap<BookAuthor, BookAuthorFormModel>().ReverseMap();
+			CreateMap<BookAuthor, BookAuthorFormModel>()
+				.ReverseMap();
+				//.AfterMap<BookAction>();
 		}
 	}
 }

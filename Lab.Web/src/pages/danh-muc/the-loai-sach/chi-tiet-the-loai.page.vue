@@ -1,27 +1,59 @@
 <template>
   <b-page-title :title="title"></b-page-title>
-  <q-table :title="title" :rows="items" :columns="columns" :visibleColumns="visibleColumns"
-    v-model:pagination="pagination" :loading="loading" @request="onTableRequest" :row-key="primaryKey"
-    loading-label="Đang tải dữ liệu" no-data-label="Không có dữ liệu" no-results-label="Không tìm thấy kết quả phù hợp"
-    flat dense>
+  <q-table
+    :title="title"
+    :rows="items"
+    :columns="columns"
+    :visibleColumns="visibleColumns"
+    v-model:pagination="pagination"
+    :loading="loading"
+    @request="onTableRequest"
+    :row-key="primaryKey"
+    loading-label="Đang tải dữ liệu"
+    no-data-label="Không có dữ liệu"
+    no-results-label="Không tìm thấy kết quả phù hợp"
+    flat
+    dense
+  >
     <template #top-left>
-      <q-btn flat dense color="primary" icon="add" label="Thêm mới" @click="add">
+      <q-btn
+        flat
+        dense
+        color="primary"
+        icon="add"
+        label="Thêm mới"
+        @click="add"
+      >
         <q-tooltip>Thêm mới <em>Tình trạng thiết bị</em></q-tooltip>
       </q-btn>
     </template>
     <template #top-right="{ inFullscreen, toggleFullscreen }">
-      <q-input dense borderless square v-model="filterModel.keyword" placeholder="Tìm kiếm" @keypress.enter="search">
+      <q-input
+        dense
+        borderless
+        square
+        v-model="filterModel.keyword"
+        placeholder="Tìm kiếm"
+        @keypress.enter="search"
+      >
         <template v-slot:append>
           <q-icon name="search" />
           <q-btn flat round icon="filter_list" unelevated dense>
             <q-popup-proxy>
               <q-card flat bordered class="bg-grey-1" style="min-width: 300px">
                 <q-card-section class="q-pa-md q-gutter-md">
-                  <q-select label="Năm áp dụng" v-model="filterModel.namApDung" :options="years" clearable></q-select>
+                  <q-select
+                    label="Năm áp dụng"
+                    v-model="filterModel.namApDung"
+                    :options="years"
+                    clearable
+                  ></q-select>
                 </q-card-section>
                 <q-separator />
                 <q-card-actions>
-                  <q-btn color="primary" @click="search" v-close-popup>Tìm kiếm</q-btn>
+                  <q-btn color="primary" @click="search" v-close-popup
+                    >Tìm kiếm</q-btn
+                  >
                 </q-card-actions>
               </q-card>
             </q-popup-proxy>
@@ -38,17 +70,39 @@
           <q-card flat bordered class="bg-grey-1">
             <q-card-section>
               <label>Số bản ghi trên 1 trang</label>
-              <q-select v-model="pagination.rowsPerPage" :options="rowsPerPageOptions" outlined dense options-dense />
+              <q-select
+                v-model="pagination.rowsPerPage"
+                :options="rowsPerPageOptions"
+                outlined
+                dense
+                options-dense
+              />
             </q-card-section>
             <q-card-section>
               <label>Hiển thị</label>
-              <q-select v-model="visibleColumns" multiple outlined dense options-dense display-value="Cột" emit-value
-                map-options :options="optionsColumns" option-value="name" options-cover />
+              <q-select
+                v-model="visibleColumns"
+                multiple
+                outlined
+                dense
+                options-dense
+                display-value="Cột"
+                emit-value
+                map-options
+                :options="optionsColumns"
+                option-value="name"
+                options-cover
+              />
             </q-card-section>
           </q-card>
         </q-popup-proxy>
       </q-btn>
-      <q-btn flat round :icon="inFullscreen ? 'fullscreen_exit' : 'fullscreen'" @click="toggleFullscreen" />
+      <q-btn
+        flat
+        round
+        :icon="inFullscreen ? 'fullscreen_exit' : 'fullscreen'"
+        @click="toggleFullscreen"
+      />
     </template>
     <template #body-cell-actions="{ row }">
       <q-td style="width: 100px">
@@ -91,8 +145,14 @@
     <template #bottom="{ pagination, pagesNumber }">
       {{ paginationMessage }}
       <q-space />
-      <q-pagination :model-value="pagination.page" color="grey-8" :max="pagesNumber" :max-pages="6"
-        @update:model-value="changePage" boundary-numbers />
+      <q-pagination
+        :model-value="pagination.page"
+        color="grey-8"
+        :max="pagesNumber"
+        :max-pages="6"
+        @update:model-value="changePage"
+        boundary-numbers
+      />
     </template>
     <template #body-cell-heSo="{ value }">
       <q-td class="text-center">
@@ -100,18 +160,20 @@
       </q-td>
     </template>
   </q-table>
-  <b-dialog v-model="formShowing" :component="formComponent" :attributes="formAttributes" />
+  <b-dialog
+    v-model="formShowing"
+    :component="formComponent"
+    :attributes="formAttributes"
+  />
 </template>
 <script lang="ts" setup>
 import { usePage } from '@blessing-vn/webapp';
-import { ChiTietTacGiaColumns } from './tac-gia.columns';
-import { ChiTietTacGiaForm, TacGiaForm } from './forms';
+import { ChiTietTheLoaiColumns } from './chi-tiet-the-loai.columns';
+import { ChiTietTheLoaiForm, TheLoaiForm } from './forms';
 import { DEFAULT_YEAR, YEARS } from 'src/constants';
 
-import { IModel } from '@blessing-vn/core';
-
-const title = 'Chi tiết tác giả';
-const apiName = 'book-author';
+const title = 'Chi tiết thể loại';
+const apiName = 'book-category';
 
 const {
   items,
@@ -136,51 +198,27 @@ const {
   refresh,
   changePage,
   search,
-  http
 } = usePage({
   name: apiName,
   title: title,
-  columns: ChiTietTacGiaColumns,
+  columns: ChiTietTheLoaiColumns,
   components: {
-    addForm: ChiTietTacGiaForm,
-    editForm: ChiTietTacGiaForm,
-    viewForm: TacGiaForm,
+    addForm: ChiTietTheLoaiForm,
+    editForm: ChiTietTheLoaiForm,
+    viewForm: TheLoaiForm,
   },
   events: {
     onAdd: (model) => {
       model.soLuong = 0;
       model.publishYear = DEFAULT_YEAR;
-      model.numbers = [];
       return model;
-    }
+    },
   },
   defaultFormAttributes: {
     dialogWidth: '650px',
     dialogHeight: '400px',
-    onSaveMultiple: async (models: IModel[]) => {
-      let isValid = isAuthorsValid(models);
-
-      if (isValid) {
-        await http.post('/add-multiple', models);
-        return;
-      }
-      alert('Invalid data');
-    }
   },
 });
 
-
-const isAuthorsValid = (models: IModel[]) => {
-  let isValid = true;
-  models.forEach(item => {
-    // convert id to number
-    item.bookId = +item.bookId;
-    if (typeof (item.bookId) !== 'number') {
-      isValid = false;
-    }
-    // check valid date
-  });
-  return isValid;
-}
 const years = YEARS;
 </script>

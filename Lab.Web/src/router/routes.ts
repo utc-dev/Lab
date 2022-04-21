@@ -95,6 +95,22 @@ const routes: RouteRecord[] = [
           },
         },
       },
+      {
+        path: 'danh-muc/the-loai-sach',
+        component: () =>
+          import(
+            'pages/danh-muc/the-loai-sach/chi-tiet-the-loai.page.vue'
+          ),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'webhook',
+            text: 'Thể loại sách',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
     ],
   },
   // Always leave this as last one,
