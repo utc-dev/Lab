@@ -72,7 +72,7 @@ const routes: RouteRecord[] = [
         meta: {
           authorize: false,
           navigation: {
-            icon: 'trending_up',
+            icon: 'book',
             text: 'Chi tiết sản phẩm',
             order: 0,
             group: NavigationGroupLinks[1],
@@ -88,7 +88,7 @@ const routes: RouteRecord[] = [
         meta: {
           authorize: false,
           navigation: {
-            icon: 'webhook',
+            icon: 'info',
             text: 'Chi tiết tác giả',
             order: 0,
             group: NavigationGroupLinks[1],
@@ -104,13 +104,49 @@ const routes: RouteRecord[] = [
         meta: {
           authorize: false,
           navigation: {
-            icon: 'webhook',
+            icon: 'menu_book',
             text: 'Thể loại sách',
             order: 0,
             group: NavigationGroupLinks[1],
           },
         },
       },
+
+      {
+        path: 'danh-muc/don-hang',
+        component: () =>
+          import(
+            'pages/danh-muc/don-hang/don-hang.page.vue'
+          ),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'list_alt',
+            text: 'Đơn hàng',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
+
+      {
+        path: 'danh-muc/chi-tiet-don-hang',
+        component: () =>
+          import(
+            'pages/danh-muc/chi-tiet-don-hang/chi-tiet-don-hang.page.vue'
+          ),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'crop_original',
+            text: 'Chi tiết Đơn hàng',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
+
+
     ],
   },
   // Always leave this as last one,

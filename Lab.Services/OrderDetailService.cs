@@ -8,11 +8,11 @@ namespace Lab.Services
 {
 	class OrderDetailService : Service<OrderDetails, int>, IOrderDetailService
 	{
-		public OrderDetailService(LabDataContext context, IServiceProvider serviceProvider, ILogger<BookAuthorService> logger) : base(context, serviceProvider, logger)
+		public OrderDetailService(LabDataContext context, IServiceProvider serviceProvider, ILogger<OrderDetailService> logger) : base(context, serviceProvider, logger)
 		{
 		}
 
-		public override string Name { get; } = "BookAuthor";
+		public override string Name { get; } = "OrderDetail";
 
 		protected override IDictionary<ActionService, ActionServiceMessage> ActionsMessages { get; } = new Dictionary<ActionService, ActionServiceMessage>
 		{

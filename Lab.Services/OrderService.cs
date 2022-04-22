@@ -7,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lab.Services
 {
-    public class OrderService : Service<Order, int>, IOrderService
+    class OrderService : Service<Order, int>, IOrderService
     {
-        public OrderService(DbContext context, IServiceProvider serviceProvider, ILogger logger) : base(context, serviceProvider, logger)
+        public OrderService(LabDataContext context, IServiceProvider serviceProvider, ILogger<OrderService> logger) : base(context, serviceProvider, logger)
         {
         }
-		public override string Name { get; } = "Book";
+		public override string Name { get; } = "Order";
 
 		protected override IDictionary<ActionService, ActionServiceMessage> ActionsMessages { get; } = new Dictionary<ActionService, ActionServiceMessage>
 		{

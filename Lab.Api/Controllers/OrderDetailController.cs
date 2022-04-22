@@ -18,7 +18,7 @@ namespace Lab.Api.Controllers
 		}
 
 		[HttpGet]
-		public IMethodResult Search([FromQuery] OrderDetailSearchModel model)
+		public IMethodResult Search([FromQuery]OrderDetailSearchModel model)
 		{
 			return _service.Search<OrderDetailViewModel>(model);
 		}
