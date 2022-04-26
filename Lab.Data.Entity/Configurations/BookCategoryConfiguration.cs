@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lab.Data.Entity.Configurations
 {
-    internal class BookCategoryConfiguration : IEntityTypeConfiguration<BookCategory>
+    class BookCategoryConfiguration : IEntityTypeConfiguration<BookCategory>
 	{
 		public void Configure(EntityTypeBuilder<BookCategory> builder)
 		{
@@ -18,7 +18,7 @@ namespace Lab.Data.Entity.Configurations
 
 			builder.Property(x => x.Id).ValueGeneratedOnAdd();
 			builder.Property(x => x.Ma).HasMaxLength(50).IsRequired().IsUnicode();
-			builder.Property(x => x.Ten).HasMaxLength(150).IsRequired().IsUnicode();
+			builder.Property(x => x.Ten).HasMaxLength(150).IsRequired(false).IsUnicode();
 			builder.Property(x => x.CreatedBy).HasMaxLength(50).IsRequired(false).IsUnicode();
 			builder.Property(x => x.LastModifiedBy).HasMaxLength(50).IsRequired(false).IsUnicode();
 			builder.Property(x => x.DeletedBy).HasMaxLength(50).IsRequired(false).IsUnicode();

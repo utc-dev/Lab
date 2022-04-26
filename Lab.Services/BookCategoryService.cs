@@ -6,12 +6,12 @@ using Microsoft.Extensions.Logging;
 
 namespace Lab.Services
 {
-    internal class BookCategoryService : Service<BookCategory, int>, IBookCategoryService
+    class BookCategoryService : Service<BookCategory, int>, IBookCategoryService
     {
         public BookCategoryService(LabDataContext context, IServiceProvider serviceProvider, ILogger<BookCategoryService> logger) : base(context, serviceProvider, logger)
         {
         }
-		public override string Name { get; } = "BookCategory";
+		public override string Name { get; } = "Bookcategory";
 
 		protected override IDictionary<ActionService, ActionServiceMessage> ActionsMessages { get; } = new Dictionary<ActionService, ActionServiceMessage>
 		{

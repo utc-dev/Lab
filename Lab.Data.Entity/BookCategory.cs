@@ -2,7 +2,7 @@
 
 namespace Lab.Data.Entity
 {
-    public class BookCategory : BaseEntity, ISoftDelete, IAuditable
+    public class BookCategory : BaseEntity, ISoftDelete, IAuditable, IEntity<int>
     {
         public string Ma { get; set; }
         public string Ten { get; set; }

@@ -17,7 +17,7 @@ namespace Lab.Api.Controllers
 		}
 
 		[HttpGet]
-		public IMethodResult Search([FromQuery] BookCategorySearchModel model)
+		public IMethodResult Search([FromQuery]BookCategorySearchModel model)
 		{
 			return _service.Search<BookCategoryViewModel>(model);
 		}
