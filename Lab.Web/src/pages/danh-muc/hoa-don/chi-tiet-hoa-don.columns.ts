@@ -1,0 +1,60 @@
+import { TableColumn } from '@blessing-vn/webapp';
+
+export const ChiTietHoaDonColumns: TableColumn[] = [
+  {
+    name: 'actions',
+    field: '',
+    label: '',
+    align: 'center',
+    sortable: false,
+    required: true,
+  },
+  {
+    name: 'Id',
+    label: 'Id',
+    field: 'id',
+    align: 'left',
+    sortable: true,
+    required: true,
+  },
+  {
+    name: 'MaHD',
+    label: 'Mã Hóa Đơn',
+    field: 'maHD',
+    align: 'center',
+    sortable: true,
+    required: true,
+  },
+  {
+    name: 'TenHD',
+    label: 'Tên Hóa Đơn',
+    field: 'tenHD',
+    align: 'center',
+    sortable: true,
+    required: true,
+  },
+  {
+    name: 'MaSP',
+    label: 'Mã Sản Phẩm',
+    field: 'maSP',
+    align: 'center',
+    sortable: true,
+    required: true,
+  },
+  {
+    name: 'SoLuong',
+    label: 'Số lượng',
+    field: 'soLuong',
+    align: 'center',
+    sortable: true,
+    required: true,
+  },
+  {
+    name: 'Note',
+    label: 'Ghi chú',
+    field: 'note',
+    align: 'center',
+    sortable: true,
+    required: true,
+  },
+];

@@ -20,6 +20,7 @@ namespace Lab.Services
 			services.AddScoped<IBookCategoryService, BookCategoryService>();
 			services.AddScoped<IOrderService, OrderService>();
 			services.AddScoped<IOrderDetailService, OrderDetailService>();
+			services.AddScoped<IBillService, BillService>();
 		}
 	}
 }

@@ -146,6 +146,23 @@ const routes: RouteRecord[] = [
         },
       },
 
+      {
+        path: 'danh-muc/hoa-don',
+        component: () =>
+          import(
+            'pages/danh-muc/hoa-don/chi-tiet-hoa-don.page.vue'
+          ),
+        meta: {
+          authorize: false,
+          navigation: {
+            icon: 'credit_card',
+            text: 'Chi tiết hóa đơn',
+            order: 0,
+            group: NavigationGroupLinks[1],
+          },
+        },
+      },
+
 
     ],
   },

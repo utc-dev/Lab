@@ -18,7 +18,7 @@ namespace Lab.Api.Controllers
 		}
 
 		[HttpGet]
-		public IMethodResult Search([FromQuery] BillSearchModel model)
+		public IMethodResult Search([FromQuery]BillSearchModel model)
 		{
 			return _service.Search<BillViewModel>(model);
 		}
