@@ -18,7 +18,8 @@ namespace Lab.Data.Entity
 			builder.Property(x => x.MaSP).HasMaxLength(500).IsRequired(true).IsUnicode();
 			builder.Property(x => x.MaDH).HasMaxLength(150).IsRequired(true).IsUnicode();
 			builder.Property(x => x.SoLuong).IsRequired(true);
-
+			builder.Property(x => x.NgayTaoDon).HasColumnType("date");
+			builder.Property(x => x.TrangThai).HasMaxLength(500).IsRequired(true).IsUnicode();
 		}
 
     }

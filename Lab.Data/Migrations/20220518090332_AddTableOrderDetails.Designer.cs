@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Lab.Data.Migrations
 {
     [DbContext(typeof(LabDataContext))]
-    [Migration("20220421085330_OrderDetail")]
-    partial class OrderDetail
+    [Migration("20220518090332_AddTableOrderDetails")]
+    partial class AddTableOrderDetails
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,6 +110,41 @@ namespace Lab.Data.Migrations
                     b.HasIndex("AuditLogId");
 
                     b.ToTable("AuditLogDetails", "System");
+                });
+
+            modelBuilder.Entity("Lab.Data.Entity.Bill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("MaHD")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("MaSP")
+                        .HasMaxLength(150)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenHD")
+                        .HasMaxLength(150)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Bill");
                 });
 
             modelBuilder.Entity("Lab.Data.Entity.Book", b =>
@@ -224,7 +259,6 @@ namespace Lab.Data.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Ten")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(150)");
@@ -286,8 +320,17 @@ namespace Lab.Data.Migrations
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<DateTime>("NgayTaoDon")
+                        .HasColumnType("date");
+
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
+
+                    b.Property<string>("TrangThai")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("Id");
 

@@ -16,6 +16,14 @@
       <b-field-view label="Số lượng">
         {{ model.soLuong }}
       </b-field-view>
+
+      <b-field-view label="Ngày tạo đơn">
+        {{ model.ngayTaoDon }}
+      </b-field-view>
+
+      <b-field-view label="Trạng thái">
+        {{ model.trangThai }}
+      </b-field-view>
     </b-field-group-view>
   </b-form-details>
 </template>

@@ -8,5 +8,7 @@ namespace Lab.Models
 		public string MaSP { get; set; }
 		public int SoLuong { get; set; }
 		public int Id { get; set; }
+		public DateTime NgayTaoDon { get; set; }
+		public string TrangThai { get; set; }
 	}
 }

@@ -41,5 +41,23 @@ export const ChiTietDonHangColumns: TableColumn[] = [
     sortable: true,
     required: true,
   },
+
+  {
+    name: 'NgayTaoDon',
+    label: 'NgayTaoDon',
+    field: 'ngayTaoDon',
+    align: 'left',
+    sortable: true,
+    required: true,
+  },
+
+  {
+    name: 'TrangThai',
+    label: 'TrangThai',
+    field: 'trangThai',
+    align: 'left',
+    sortable: true,
+    required: true,
+  },
   
 ];

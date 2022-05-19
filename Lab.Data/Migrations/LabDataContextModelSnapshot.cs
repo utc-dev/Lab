@@ -318,8 +318,17 @@ namespace Lab.Data.Migrations
                         .IsUnicode(true)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<DateTime>("NgayTaoDon")
+                        .HasColumnType("date");
+
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
+
+                    b.Property<string>("TrangThai")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("Id");
 

@@ -17,7 +17,6 @@ namespace Lab.Data.Entity
 			builder.Property(x => x.Id).ValueGeneratedOnAdd();
 			builder.Property(x => x.MaDH).HasMaxLength(500).IsRequired(true).IsUnicode();
 			builder.Property(x => x.TenDH).HasMaxLength(150).IsRequired(true).IsUnicode();
-			builder.Property(x => x.OrderDate).IsRequired(true);
 
 		}
 

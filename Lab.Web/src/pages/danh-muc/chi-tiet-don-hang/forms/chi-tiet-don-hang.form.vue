@@ -17,6 +17,14 @@
         <q-input v-model="item.soLuong" type="number"  filled
       style="max-width: 200px" label="Số lượng" />
       </div>
+
+     <div class="col">
+        <q-input v-model="item.ngayTaoDon" label="Ngày tạo đơn" />
+      </div>
+      
+      <div class="col">
+        <b-select-criterion v-model="item.trangThai" label="Trạng thái" />
+      </div>
     </div>
     <template #actions>
       <q-btn label="Lưu lại" type="submit" color="primary" icon="save">

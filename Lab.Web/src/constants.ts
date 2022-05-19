@@ -21,20 +21,10 @@ const SCHOLASTICS: { value: number; label: string }[] = YEARS.map((x) => ({
 // ];
 const CRITERIONS = [
   {
-    group: 'Thể loại sách',
+    group: 'Trạng thái',
     items: [
-      { value: 1, label: 'Văn học' },
-      { value: 2, label: 'Kinh tế' },
-      { value: 3, label: 'Thiếu nhi' },
-      { value: 4, label: 'Kỹ năng sống' },
-      { value: 5, label: 'Truyện tranh' },
-      { value: 6, label: 'Kinh tế' },
-      { value: 7, label: ' Từ điển' },
-      { value: 8, label: 'Ngoại ngữ' },
-      { value: 9, label: 'Tham khảo' },
-      { value: 10, label: 'Lịch sử' },
-      { value: 11, label: 'Toán học' },
-      { value: 12, label: 'Kiến thức tổng hợp' },
+      { value: 1, label: 'Hoàn thành' },
+      { value: 2, label: 'Chưa hoàn thành' },
     ],
   },
 ];
